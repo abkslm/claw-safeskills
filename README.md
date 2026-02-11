@@ -1,6 +1,8 @@
 # claw-safeskills
 This is a repository of miscellaneous skills for OpenClaw agents that are designed to be safe, non-destructive, and non-intrusive.
 
+Instructions are only available for macOS at this time, ymmv with Linux and Windows.
+
 ## Skills
 
 All skills follow the expected [Agent Skills](https://agentskills.io/specification) specification.
@@ -19,7 +21,7 @@ Generates high-quality images using the Nano Banana Pro API. Use this when the u
 Necessary Secrets:
 - `nano-banana-skill:API_KEY`
 
-## To install a safeskill:
+## Install a safeskill:
 
 > See the [Dependencies](#dependencies) section before getting started.
 
@@ -35,6 +37,12 @@ Necessary Secrets:
     make <skill-name>
     ```
 
+3. Dry-run the skill to grant permissions:
+    ```bash
+    skill-name/scripts/skill-name
+    ```
+    >A dialogue will appear requesting permission to access the secret(s) for the skill. Verify the program name matches the skill name, then grant it with "Always Allow".
+
 3. Copy the skill to the OpenClaw skills directory
     ```bash
     # Global installation (all workspaces)
@@ -43,6 +51,12 @@ Necessary Secrets:
     # Per-workspace installation
     cp -r <skill-name> ~/.openclaw/workspaces/<workspace-name>/skills/
     ```
+
+## Add a secret
+```bash
+security add-generic-password -s <skill-name>-skill:<secret-name> -w <secret-value>
+# e.g., security add-generic-password -s nano-banana-skill -a API_KEY -w AI...8o
+```
 
 ## Dependencies
 
