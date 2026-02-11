@@ -8,10 +8,16 @@ All skills follow the expected [Agent Skills](https://agentskills.io/specificati
 ### exa-search
 Performs a search using the Exa Answers API to retrieve high-quality, answer-focused results for a given query. Use this when the user asks a question that requires external information or specific answers from the web.
 
+Necessary Secrets:
+- `exa-search-skill:API_KEY`
+
 ### nano-banana
 >Replaces the default *extremely insecure* implementation.
 
 Generates high-quality images using the Nano Banana Pro API. Use this when the user requests an image generation or "Make me an image".
+
+Necessary Secrets:
+- `nano-banana-skill:API_KEY`
 
 ## To install a safeskill:
 
@@ -20,19 +26,16 @@ Generates high-quality images using the Nano Banana Pro API. Use this when the u
 
 1. Clone this repository
 
-2. Navigate to the `skills/` directory
-
-3. Build the skill:
+2. Build the skill(s):
     ```bash
-    # From the skills/ directory (builds all skills)
+    # From the project root directory (builds all skills)
     make
 
     # Or build a specific skill
     make <skill-name>
     ```
-    This will compile the script executables and copy them to their respective `scripts/` directories.
 
-4. Copy the skill to the OpenClaw skills directory
+3. Copy the skill to the OpenClaw skills directory
     ```bash
     # Global installation (all workspaces)
     cp -r <skill-name> ~/.openclaw/skills/
