@@ -39,7 +39,7 @@ Necessary Secrets:
 
 3. Dry-run the skill to grant permissions:
     ```bash
-    skill-name/scripts/skill-name
+    <skill-name>/scripts/<skill-name>
     ```
     >A dialogue will appear requesting permission to access the secret(s) for the skill. Verify the program name matches the skill name, then grant it with "Always Allow".
 
