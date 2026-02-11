@@ -37,12 +37,6 @@ Necessary Secrets:
     make <skill-name>
     ```
 
-3. Dry-run the skill to grant permissions:
-    ```bash
-    <skill-name>/scripts/<skill-name>
-    ```
-    >A dialogue will appear requesting permission to access the secret(s) for the skill. Verify the program name matches the skill name, then grant it with "Always Allow".
-
 3. Copy the skill to the OpenClaw skills directory
     ```bash
     # Global installation (all workspaces)
@@ -51,6 +45,14 @@ Necessary Secrets:
     # Per-workspace installation
     cp -r <skill-name> ~/.openclaw/workspaces/<workspace-name>/skills/
     ```
+
+4. Dry-run the skill to grant permissions:
+```bash
+<path-to-skills>/<skill-name>/scripts/<skill-name>
+# e.g., ~/.openclaw/skills/nano-banana/scripts/nano-banana
+```
+>A dialogue will appear requesting permission to access the secret(s) for the skill. Verify the program name matches the skill name, then grant it with "Always Allow".
+
 
 ## Add a secret
 ```bash
