@@ -56,7 +56,7 @@ Necessary Secrets:
 
 ## Add a secret
 ```bash
-security add-generic-password -s <skill-name>-skill:<secret-name> -w <secret-value>
+security add-generic-password -s <skill-name>-skill -a <secret-name> -w <secret-value>
 # e.g., security add-generic-password -s nano-banana-skill -a API_KEY -w AI...8o
 ```
 
