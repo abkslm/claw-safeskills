@@ -8,12 +8,10 @@ All skills follow the expected [Agent Skills](https://agentskills.io/specificati
 ### exa-search
 Performs a search using the Exa Answers API to retrieve high-quality, answer-focused results for a given query. Use this when the user asks a question that requires external information or specific answers from the web.
 
-Allowed tools: Exa(answer:*)
-
 ### nano-banana
-Generates high-quality images using the Nano Banana Pro API. Use this when the user requests an image generation or "Make me an image".
+>Replaces the default *extremely insecure* implementation.
 
-Allowed tools: RunCommand
+Generates high-quality images using the Nano Banana Pro API. Use this when the user requests an image generation or "Make me an image".
 
 ## To install a safeskill:
 
@@ -36,10 +34,10 @@ Allowed tools: RunCommand
 
 4. Copy the skill to the OpenClaw skills directory
     ```bash
-    # For global installation
+    # Global installation (all workspaces)
     cp -r <skill-name> ~/.openclaw/skills/
 
-    # For per-workspace installation
+    # Per-workspace installation
     cp -r <skill-name> ~/.openclaw/workspaces/<workspace-name>/skills/
     ```
 
