@@ -1,0 +1,5 @@
+*/target/*
+*/scripts/*
+*.lock
+*.jpeg
+agent-resources
